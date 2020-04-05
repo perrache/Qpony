@@ -1,0 +1,2 @@
+# complete
+kompletne repozytorium GitHub
