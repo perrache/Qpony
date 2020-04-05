@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="pl">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Zadanie rekrutacyjne firmy Qpony">
+    <meta name="author" content="Piotr Lewandowski">
+
+    <title>Qpony</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('bootstrap/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">Qpony</a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/opis">Opis</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+{#    <div class="row">#}
+        {% block body %}
+        <div class="col-lg-12 text-center">
+            <h1 class="mt-5">PlusMinus financial application</h1>
+            <p class="lead">Private Budget</p>
+            <ul class="list-unstyled">
+                <li>Symfony 4.4</li>
+                <li>Bootstrap 4.3.1</li>
+                <li>jQuery 3.4.1</li>
+            </ul>
+        </div>
+        {% endblock %}
+{#    </div>#}
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="{{ asset('bootstrap/jquery/jquery.slim.min.js') }}"></script>
+<script src="{{ asset('bootstrap/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+</body>
+
 </html>
