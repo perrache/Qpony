@@ -78,7 +78,7 @@ class InputController extends AbstractController
         ]);
     }
 
-    private function series($par = 0) : int {
+    public function series($par = 0) : int {
         $param = $par ?? 0;
 
         if ($param >= 100000) return -1;
@@ -106,5 +106,13 @@ class InputController extends AbstractController
         }
 
         return $max;
+    }
+
+    /**
+     * @Route("/opis", methods={"GET"}, name="input_opis")
+     */
+    public function opis()
+    {
+        return $this->render('input/opis.html.twig', []);
     }
 }
