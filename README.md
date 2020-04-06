@@ -1,2 +1,2 @@
-# complete
-kompletne repozytorium GitHub
+# Zadanie rekrutacyjne firmy Qpony
+Projekt wykonany w Symfony 4.4 na komputerze Mac z preinstalowanym PHP w wersji 7.3.11, czyli po sklonowaniu repozytorium na dysk lokalny należy w jego katalogu uruchomić serwer komendą  symfony server:start --no-tls, następnie w przeglądarce wejść na adres http://localhost:8000. Projekt uruchamiany był wyłącznie w przeglądarce Chrome. Wersja konsolowa programu uruchamia się w katalogu projektu komendą  php bin/console qpony plus parametr oznaczjący wartość wejściową do obliczenia.
