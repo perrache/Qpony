@@ -80,6 +80,31 @@ class InputController extends AbstractController
 
     private function series($par = 0) : int {
         $param = $par ?? 0;
-        return $param + 1;
+
+        if ($param >= 100000) return -1;
+        if ($param == 0) return 0;
+        if ($param == 1) return 1;
+
+        $tab[0] = 0;
+        $tab[1] = 1;
+
+        $parz = true;
+        $max = 0;
+
+        for ($i = 2; $i <= $param; $i++) {
+            $pom1 = intdiv($i, 2);
+            $pom2 = $pom1 + 1;
+
+            if ($parz) {
+                $tab[$i] = $tab[$pom1];
+            } else {
+                $tab[$i] = $tab[$pom1] + $tab[$pom2];
+            }
+
+            $parz = ! $parz;
+            if ($tab[$i] > $max) $max = $tab[$i];
+        }
+
+        return $max;
     }
 }
