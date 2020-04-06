@@ -19,16 +19,16 @@ class InputController extends AbstractController
     	$setNumber = new SetNumber();
 
         $form = $this->createFormBuilder($setNumber)
-            ->add('in0', IntegerType::class, ['required' => false, 'label' => 'liczba0'])
-            ->add('in1', IntegerType::class, ['required' => false, 'label' => 'liczba1'])
-            ->add('in2', IntegerType::class, ['required' => false, 'label' => 'liczba2'])
-            ->add('in3', IntegerType::class, ['required' => false, 'label' => 'liczba3'])
-            ->add('in4', IntegerType::class, ['required' => false, 'label' => 'liczba4'])
-            ->add('in5', IntegerType::class, ['required' => false, 'label' => 'liczba5'])
-            ->add('in6', IntegerType::class, ['required' => false, 'label' => 'liczba6'])
-            ->add('in7', IntegerType::class, ['required' => false, 'label' => 'liczba7'])
-            ->add('in8', IntegerType::class, ['required' => false, 'label' => 'liczba8'])
-            ->add('in9', IntegerType::class, ['required' => false, 'label' => 'liczba9'])
+            ->add('in0', IntegerType::class, ['required' => false, 'label' => false, 'empty_data' => 0])
+            ->add('in1', IntegerType::class, ['required' => false, 'label' => false, 'empty_data' => 0])
+            ->add('in2', IntegerType::class, ['required' => false, 'label' => false, 'empty_data' => 0])
+            ->add('in3', IntegerType::class, ['required' => false, 'label' => false, 'empty_data' => 0])
+            ->add('in4', IntegerType::class, ['required' => false, 'label' => false, 'empty_data' => 0])
+            ->add('in5', IntegerType::class, ['required' => false, 'label' => false, 'empty_data' => 0])
+            ->add('in6', IntegerType::class, ['required' => false, 'label' => false, 'empty_data' => 0])
+            ->add('in7', IntegerType::class, ['required' => false, 'label' => false, 'empty_data' => 0])
+            ->add('in8', IntegerType::class, ['required' => false, 'label' => false, 'empty_data' => 0])
+            ->add('in9', IntegerType::class, ['required' => false, 'label' => false, 'empty_data' => 0])
             ->add('obl', SubmitType::class, ['label' => 'OBLICZ'])
             ->getForm();
 
@@ -78,7 +78,8 @@ class InputController extends AbstractController
         ]);
     }
 
-    private function series(int $par) : int {
-        return 987888;
+    private function series($par = 0) : int {
+        $param = $par ?? 0;
+        return $param + 1;
     }
 }
